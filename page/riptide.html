@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+         <link rel="stylesheet"  href="../css/css.css"/>
+        
+        <title>MagMap Project : Riptide</title>
+    </head>
+
+    <body>
+
+        <header>
+                <div id="titre_principal">
+                    <div id="logo">
+                        <img src="../picture/ensta.png" alt="Logo de l'ensta" />
+                           
+                    </div>
+                    <div id="title_header">
+                    <h1><a href="../index.html">  Project Magmap </a></h1>
+                </div>
+                </div>
+                
+                <nav>
+                    <ul>
+                    	<li> <a href="magnetic.html"> Etude du capteur magnétique </a></li>
+                        <li> <a href="saturne.html"> Saturne </a></li>
+
+                    </ul>
+                </nav>
+            </header>
+        
+        <div id="page_title">
+        <h1>Prise en main du Ritpide pour créer la carte électromagnétique sous-marine</h1>
+        </div>
+
+        <div id="intro">
+        	<h3>Présentation du projet:</h3>
+        
+	        <p>
+	        	Pour ce projet, nous nous sommes divisés en sous-groupe afin de travailler à la fois sur la partie riptide, capteur magnétique et saturne. Cette page concerne le travail réalisé sur l’AUV. 
+	        	Les membres ayant travaillés sur cette partie sont :
+	        <br>    
+	        </p>
+
+	        <p> FLÉCHARD Romane        <br> </p>
+	        <p> HACENE Hamid           <br> </p>
+	        <p> KASSAMALY Mourtaza     <br> </p>
+	        <p> LEMOINE Corentin       <br> </p>
+	        <p> PINEAU Paul            <br> </p>
+	        <p> PIRANDA Julien         <br> </p>
+	        <p> VINTRAS Quentin        <br> </p>
+
+	        <p>
+	        	Nous avons divisé nos travaux en 3 grandes parties : 
+	        </p>
+        </div>
+
+        <button class="collapsible">1. Contrôleur</button>
+        <div class="content">
+    		<p> Fait le 16/11/2020   <br> </p>
+	    		<p> Prise en main du code existant et passage sous python3 <br> </p>
+	    		<p> Contrôleur python avec suivi d’une liste de waypoints en partie sous ROS <br> </p>
+
+	    	<p> Fait le 25/11/2020 <br> </p>
+	    		<p> Aujourd’hui nous avons avancé le passage sous ROS du contrôleur en respectant l’architecture déjà existante. Nous avons fait face à plusieurs problèmes sur la mise en œuvre de certains publishers. On prévoit maintenant de faire un observateur d’état en utilisant les données sous ROS avant de les renvoyer au contrôleur. <br> </p>
+
+	    	<p> Fait le 14/12/2020 <br> </p>
+	    		<p>  Aujourd'hui, nous avons continué le passage sous ROS du riptide. Nous nous sommes occupés de la partie mission du projet. Avec la mise en place de waypoints, de lecture de fichier Json. Le nœud Ros Mission permet d’envoyer les waypoints sous la forme de geometry_msgs/Points. De plus, nous nous sommes intéressés au traitement des données reçues par les capteurs. <br> </p>
+
+	    	<p> Fait le 06/01/2021 <br> </p>
+	    		<p> Mise en commun des travaux avec l’ensemble des sous-groupes du projet Riptide. <br> </p>
+	    		<p> Etude et bilan de la partie simulation. <br> </p>
+	    		<p> Recherche et adaptation de la partie ROS avec la partie Gazebo: la simulation demandant en entrée les différentes consignes des moteurs, nous avons adapté la partie ROS pour publier les bonnes informations nécessaires au bon fonctionnement de la simulation. <br> </p>
+                <img src="../picture/schema_noeuds_ros.png"> <br>
+	    		<p> Une fois, la partie ROS finie. Nous avons travaillé sur un moyen de lancer les nœuds ROS plus facilement. Pour cela, nous avons mise en place un fichier launch. Problèmes rencontrés lors de la mise en place de ce fichier dû à un caractère de fin de ligne Windows qui posait problème pour Linux <br> </p>
+	    		<p> Le fichier launch permet donc de lancer les différents nœuds ROS et prend en argument le chemin du fichier json (qui décrit la mission). <br></p>
+        </div>
+        <button class="collapsible">2. Simulation Gazebo –UUV Simulator</button>
+        <div class="content">
+          <p> Fait le 16/11/2020 <br> </p>
+                <p> Simulation d’un AUV quelconque sur Gazebo <br> </p>
+                <p> Ajout de capteurs sur Gazebo <br> </p>
+                <p> Ajout de thrusters sur Gazebo <br> </p>
+                <p> Modélisation 3D du Riptide (corps et ailerons) sur CAO.  <br> </p>
+
+            <p> Fait le 25/11/2020 <br> </p>
+                <p> Cette semaine nous nous sommes focalisés sur la création d’un AUV pour le plugin UUV Simulator de Gazebo. Cela comprend l’analyse des besoins d’informations sur le Riptide aussi bien sur la partie mécanique (matrice d’inertie, volume, masse) que sur la partie capteurs/actionneurs qu’il va falloir modéliser. Cela nécessite pour nous une revue des possibilités de Gazebo et du plugin UUV Simulator pour savoir comment implémenter les capteurs et actionneurs ainsi que les informations nécessaires au simulateur. <br> </p>
+
+                <p> Apprentissage de Gazebo et de ses possibilités <hr> </p>
+                <p> Prise en main de Gazebo et UUV Simulator <br> </p>
+                <p> Notion de fichiers .world, .urdf, .xacro... <br> </p>
+                <p> Réalisations de tutoriels pour apprendre à utiliser le logiciel <br> </p>
+                <p> Etude du logiciel en essayant ses fonctions <br> </p>
+                
+                <p> Plugins pour les capteurs et pour les actionneurs <br> </p>
+                <p> Découverte et choix des plugins modélisant les actionneurs <br> </p>
+                <p> Découverte et choix des plugins modélisant les actionneurs <br> </p>
+                <p> Comment les implémenter sur un AUV et les utiliser ? <br> </p>
+                <p> Commande actionneur ? <br> </p>
+                <p> Retour capteur ? <br> </p>
+
+                <h1> Lancement de la modélisation du Riptide sur Gazebo <br> </h1>
+                <p> Nous avons commencé par la modélisation 3Ddu robot qui comprend le corps, les ailerons et le propulseur. <br> </p>
+                <img src="../picture/riptide0.png"> <br>
+                <img src="../picture/aile_riptide.png"> <br>
+                <p> En parallèle nous avons créé le plugin du Riptidesur gazebo. Il comprend les liens vers les actionneurs, les capteurs, mais aussi le modèle physique (masses, matrice d’inertie, modèle hydrodynamique...). Nous avons implémenté le modèle 3D dans le plugin, il faut maintenant synchroniser les actionneurs et les capteurs avec ce modèle 3D. <br> </p>
+                <img src="../picture/riptide_gazebo0.png"> <br>
+
+            <p> Fait le 14/12/2020 <br> </p>
+                <p> Finir la modélisation du Riptide (positions relatives et commande du propulseur et des ailerons) <br> </p>
+                <img src="../picture/riptide_gazebo1.png"> <br>
+
+            <p> Fait le 06/01/2021 <br> </p>
+                <p> Modélisation finale du Riptide : ajout des ailerons et des capteurs. <br> </p>
+                <img src="../picture/riptide_gazebo2.png"> <br>
+                <p> Gestion de la flottaison du Riptide : <br> </p>
+                <p> A l’aide du principe  d’Archimède, nous avons calculé la masse du Riptide dans le cas où celui ci est en équilibre dans l’eau. Ainsi nous avons pu déterminer la masse du Riptide à rentrer dans gazebo afin que celui-ci flotte. <br> </p>
+
+
+                <p> Test de commande du Riptide sous Rqt: <br> </p>
+                     <p> Envoi de commande (directement sur les topics via Rqt) au propulseur et aux ailerons. <br> </p>
+                     <p> Vérification de la manœuvrabilité de l’AUV. <br> </p>
+                <p> Point avec Paul et Julien pour se mettre d’accord sur les topics utilisés et la forme des messages que l’on se transmettra mutuellement entre notre simulation Gazebo et leur contrôleur sous ROS. <br> </p>
+
+        </div>
+        <button class="collapsible">3. Partie électronique</button>
+        <div class="content">
+          <p> Fait le 16/11/2020 <br> </p>
+                <p>  <br> </p>
+                <img src="../picture/schema_elec.png"> <br>
+                
+                <p> Architecture matérielle : <br> </p>
+                <p> Pour effectuer des tests sur la partie matérielle, nous allons ajouter une télécommande pour piloter le robot. Comme les récepteurs ne nous permettent pas d’avoir suffisamment de voies pour contrôler l’ensemble des actionneurs (+sélecteur), nous allons rajouter une arduino (pour utiliser les 12 voies du PPM). Ceci a l’avantage de permettre un contrôle plus facile et intuitif pour commander le Riptide en nous permettant de mixer plus facilement les voies. Pour démarrer/arrêter le système, nous partons sur un interrupteur magnétique ILS. <br> </p>
+
+                <p> Commande du matériel : <br> </p>
+                <p> mail envoyé à M. Le Bars et M. Fourniol <br> </p>
+
+            <p> Fait le 25/11/2020 <br> </p>
+                <p> Réflexion sur la mise en place d’une interface haut niveau (interface web) en node js qui sera liée au contrôleur ROS dans le but de suivre l’état de l’AUV à distance et de lui envoyer des waypoints.
+                 <br> </p>
+                <p> Changement du capteur de pression (illustration ci-dessous):  <br> </p>
+                    <p> Détachement de l’ancien capteur <br> </p>
+                    <p> Fraisage d’un trou pour le nouveau capteur dans la coque de l’AUV <br> </p>
+                    <p> Insertion du capteur bar30 de BlueRobotics <br> </p>
+                    <p> Test de l’étanchéité du capteur. <br> </p>
+                    <img src="../picture/photo_riptide0.png"> <br>
+                <p> De plus nous avons travaillez sur l’implémentation d’un code permettant la reprise à distance de l’AUV via une télécommande. <br> </p>
+
+            <p> Fait le 06/01/2021 <br> </p>
+                <p> Test du capteur de pression :  <br> </p>
+                    <p> Soudure des câbles sur les connecteurs <br> </p>
+                    <p> Intégration sur le bus I2C de la raspberry pi 4 du Riptide <br> </p>
+                    <p> Installation de la librairie ‘’ms5837-python’’ <br> </p>
+                    <p> Lecture des données du capteur <br> </p>
+                    <img src="../picture/photo_riptide1.png"> <br>
+        </div>
+  
+
+
+
+   
+
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
+
+
+
+
+    </body>
+</html>
