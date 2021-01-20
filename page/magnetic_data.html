@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>MagMap Project : magnetic</title>
+    </head>
+
+    <body>
+        <h1>Project Magmap</h1>
+
+        <h2>Etude du capteur magnétique</h2>
+
+        <h2> 1. Prise en main : </h2>
+
+            <p> Fait le 16/11/2020 <br> </p>
+                <p> Découverte du magnétomètre <br> </p>
+                <p> Interfacer le magnétomètre avec Linux : ECHEC, le logiciel semble ne fonctionner que sous Windows <br> </p>
+                <p>  <br> </p>
+                <p>  <br> </p>
+
+        <h2> 2. Partie simulation : </h2>
+
+            <p> Fait le 16/11/2020 <br> </p>    
+                <p> Trouver une bibliothèque Python pour simuler le magnétomètre et l’environnement magnétique <br> </p>
+                <p> Comprendre les principes physiques du magnétomètre <br> </p>
+
+            <p> Fait le 25/11/2020 <br> </p>
+            	<p> Modification et amélioration de la simulation de survey magnétique réalisée en python (bibliothèque magPyLib). Génération de différentes cartes magnétiques en 2D vue du haut avec des objets positionnés à 1 m de profondeur suivant différentes orientations (déplacement du magnétomètre en boustrophédon). Vérification et comparaison avec les résultats de la semaine dernière (qui semblent concorder). <br> </p>
+
+
+        <h2> 3. Partie expérimentale : </h2>
+        	<p> Fait le 14/12/2020 <br> </p>    
+                <p> Tracé et analyse des données de logs du magnétomètre acquises la semaine précédente. Du bruit apparaît sur les graphes, nous décidons de reproduire l’expérience avec des scénarios plus spécifiques pour valider l’hypothèse de détection. <br> </p>
+                <p> Discussion avec Romain Schwab pour utiliser un câble plus long (des raccords de connectique devront être faits). <br> </p>
+                <p> Expérience sur le terrain : <br> </p>
+                	<p> Scénario pour acquérir le bruit ambiant <br> </p>
+                	<p> Scénario passage à vide (magnéto statique) <br> </p>
+                	<p> Scénario passage ferraille 0.5/1/2 m (magnéto statique) <br> </p>
+                	<p> Scénario passage pot en fonte 1 m (magnéto statique) <br> </p>
+                	<p> Scénarios similaires avec magnétomètre dynamique (obstacles statiques) <br> </p>
+                <p> Tracé et analyse des données de logs du magnétomètre. Ré-échantillonnage du timestamp qui était mauvais. Voici quelques figures obtenues (norme globale du champ magnétique en mT) : <br> </p>
+                <img src="../picture/experimentation_res0.png"> <br>
+                <p> On constate une relation entre le bruit des mesures et la distance séparant le magnétomètre de la plaque de ferraille : plus l’objet est proche, plus la détection magnétique est fine. <br> </p>
+                <img src="../picture/experimentation_res1.png"> <br>
+                <p> Ici un bruit dû au déplacement du magnétomètre s’ajoute aux mesures. Néanmoins, les perturbations magnétiques sont assez claires pour identifier le passage juste à côté des objets d’intérêt (la dernière traduit un passage près de la plaque de ferraille, puis du pot en fonte) <br> </p>
+
+            <p> Fait le 06/01/2021 <br> </p> 
+            	<p> Etude de la perturbation retrouvée systématiquement sur les courbes de mesures. On observe effectivement un bruit parasite périodique de 50 Hz correspondant sûrement à la présence de courants alternatifs. <br> </p>
+            	<p> Mise en place d’un filtre à moyenne glissante pour réduire ce bruit : <br> </p>  
+            	<img src="../picture/experimentation_res2.png"> <br>
+            	<p> Les courbes oranges obtenues conservent bien les anomalies magnétiques. <br> </p> 
+            	<p> Préparation des expériences en plein air : fixation du magnétomètre, de son digitaliseur et de la batterie sur la luge avec du scotch velcro. <br> </p> 
+            	<p> Série de tests sur le stade de l’ENSTA Bretagne avec la luge et le magnétomètre  <br> </p> 
+	            	<p> Un aller linéaire à 1 m de la plaque en fer <br> </p> 
+	            	<p> Un retour linéaire à 2 m de la plaque en fer. <br> </p> 
+	            	<p> Un aller linéaire reproduisant la première trajectoire, à vide sans plaque en fer <br> </p> 
+            	<p> Des vidéos ont été prises pour identifier la position du magnétomètre lors de ses missions. <br> </p> 
+            	<p> Analyse des résultats : <br> </p> 
+            	<img src="../picture/experimentation_res3.png"> <br>
+            	<p> On détecte bien l’anomalie magnétique de la ferraille (cercle vert). Par contre, on détecte une anomalie importante dont l’origine est pour l’instant inconnue (câbles enterrés, ou aimant ?). <br> </p> 
+            	
+
+
+
+        
+    </body>
+</html>
