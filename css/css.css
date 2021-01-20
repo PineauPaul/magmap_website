@@ -240,10 +240,12 @@ footer h1
 }
 
 .content {
-  padding: 0 18px;
+  padding: 18px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: rgb(40, 40, 40);
+  font-size: 20px;
   
 }s
+
