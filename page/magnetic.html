@@ -10,7 +10,7 @@
     <body>
 
         <header>
-                <div id="titre_principal">
+                
                     <div id="logo">
                         <img src="../picture/ensta.png" alt="Logo de l'ensta" />
                            
@@ -18,7 +18,7 @@
                     <div id="title_header">
                     <h1><a href="../index.html">  Project Magmap </a></h1>
                 </div>
-                </div>
+               
                 
                 <nav>
                     <ul>
@@ -28,9 +28,7 @@
                 </nav>
             </header>
         
-        <div id="page_title">
-        <h1>Etude du capteur magnétique</h1>
-        </div>
+        
 
         <div id="intro">
             <h3>Présentation du projet:</h3>
@@ -41,63 +39,73 @@
 
             </p>
 
-            <p> ARCHET Agathe      </p>
-            <p> EVAIN Alexandre    </p>
-            <p> SANCHEZ Robin      </p>
+            <p> ARCHET Agathe      <br>
+                EVAIN Alexandre    <br>
+                SANCHEZ Robin      </p>
         
             <p>
                 Nous avons divisé nos travaux en 3 grandes parties : 
             </p>
         </div>
 
-        <button class="collapsible">1. Prise en main :</button>
+        <button class="collapsible"><div id = "titreu"> 1. Prise en main : </div></button>
         <div class="content">
-          <p> Fait le 16/11/2020  </p>
-                <p> Découverte du magnétomètre  </p>
-                <p> Interfacer le magnétomètre avec Linux : ECHEC, le logiciel semble ne fonctionner que sous Windows  </p>
-                <p>   </p>
-                <p>   </p>
-        </div>
-        <button class="collapsible">2. Partie simulation :</button>
-        <div class="content">
-          <p> Fait le 16/11/2020  </p>
-                <p> Trouver une bibliothèque Python pour simuler le magnétomètre et l’environnement magnétique  </p>
-                <p> Comprendre les principes physiques du magnétomètre  </p>
+          
+          <p>   </p>
+            <div id = "date"> <li> Fait le 16/11/2020 </li> </div>
+                <p> Découverte du magnétomètre <br> 
+                 Interfacer le magnétomètre avec Linux : ECHEC, le logiciel semble ne fonctionner que sous Windows  </p>
 
-            <p> Fait le 25/11/2020  </p>
-                <p> Modification et amélioration de la simulation de survey magnétique réalisée en python (bibliothèque magPyLib). Génération de différentes cartes magnétiques en 2D vue du haut avec des objets positionnés à 1 m de profondeur suivant différentes orientations (déplacement du magnétomètre en boustrophédon). Vérification et comparaison avec les résultats de la semaine dernière (qui semblent concorder).  </p>
         </div>
-        <button class="collapsible">3. Partie expérimentale :</button>
+
+        <button class="collapsible"><div id = "titreu"> 2. Partie simulation : </div></button>
         <div class="content">
-          <p> Fait le 14/12/2020  </p>
-                <p> Tracé et analyse des données de logs du magnétomètre acquises la semaine précédente. Du bruit apparaît sur les graphes, nous décidons de reproduire l’expérience avec des scénarios plus spécifiques pour valider l’hypothèse de détection.  </p>
-                <p> Discussion avec Romain Schwab pour utiliser un câble plus long (des raccords de connectique devront être faits).  </p>
-                <p> Expérience sur le terrain :  </p>
-                    <p> Scénario pour acquérir le bruit ambiant  </p>
-                    <p> Scénario passage à vide (magnéto statique)  </p>
-                    <p> Scénario passage ferraille 0.5/1/2 m (magnéto statique)  </p>
-                    <p> Scénario passage pot en fonte 1 m (magnéto statique)  </p>
-                    <p> Scénarios similaires avec magnétomètre dynamique (obstacles statiques)  </p>
+
+          <p>   </p>
+            <div id = "date"> <li> Fait le 16/11/2020 </li> </div>    
+                <p> Trouver une bibliothèque Python pour simuler le magnétomètre et l’environnement magnétique <br> 
+                 Comprendre les principes physiques du magnétomètre  </p>
+
+            <br />
+            <div id = "date"> <li> Fait le 25/11/2020 </li> </div>
+                <p> Modification et amélioration de la simulation de survey magnétique réalisée en python (bibliothèque magPyLib). Génération de différentes cartes magnétiques en 2D vue du haut avec des objets positionnés à 1 m de profondeur suivant différentes orientations (déplacement du magnétomètre en boustrophédon). Vérification et comparaison avec les résultats de la semaine dernière (qui semblent concorder). <br> </p>
+
+        </div>
+        <button class="collapsible"><div id = "titreu"> 3. Partie expérimentale : </div></button>
+        <div class="content">
+
+
+          <p>   </p>
+            <div id = "date"> <li> Fait le 14/12/2020 </li> </div>    
+                <p> Tracé et analyse des données de logs du magnétomètre acquises la semaine précédente. Du bruit apparaît sur les graphes, nous décidons de reproduire l’expérience avec des scénarios plus spécifiques pour valider l’hypothèse de détection. <br> 
+                 Discussion avec Romain Schwab pour utiliser un câble plus long (des raccords de connectique devront être faits).  </p>
+                <p> Expérience sur le terrain : <br> 
+                     Scénario pour acquérir le bruit ambiant <br> 
+                     Scénario passage à vide (magnéto statique) <br> 
+                     Scénario passage ferraille 0.5/1/2 m (magnéto statique) <br>
+                     Scénario passage pot en fonte 1 m (magnéto statique) <br> 
+                     Scénarios similaires avec magnétomètre dynamique (obstacles statiques)  </p>
                 <p> Tracé et analyse des données de logs du magnétomètre. Ré-échantillonnage du timestamp qui était mauvais. Voici quelques figures obtenues (norme globale du champ magnétique en mT) :  </p>
-                <img src="../picture/experimentation_res0.png">
+                <img class = "displayed_img" src="../picture/experimentation_res0.png"> <br>
                 <p> On constate une relation entre le bruit des mesures et la distance séparant le magnétomètre de la plaque de ferraille : plus l’objet est proche, plus la détection magnétique est fine.  </p>
-                <img src="../picture/experimentation_res1.png">
-                <p> Ici un bruit dû au déplacement du magnétomètre s’ajoute aux mesures. Néanmoins, les perturbations magnétiques sont assez claires pour identifier le passage juste à côté des objets d’intérêt (la dernière traduit un passage près de la plaque de ferraille, puis du pot en fonte)  </p>
+                <img class = "displayed_img" src="../picture/experimentation_res1.png"> <br>
+                <p> Ici un bruit dû au déplacement du magnétomètre s’ajoute aux mesures. Néanmoins, les perturbations magnétiques sont assez claires pour identifier le passage juste à côté des objets d’intérêt (la dernière traduit un passage près de la plaque de ferraille, puis du pot en fonte) </p>
 
-            <p> Fait le 06/01/2021  </p>
-                <p> Etude de la perturbation retrouvée systématiquement sur les courbes de mesures. On observe effectivement un bruit parasite périodique de 50 Hz correspondant sûrement à la présence de courants alternatifs.  </p>
-                <p> Mise en place d’un filtre à moyenne glissante pour réduire ce bruit :  </p>
-                <img src="../picture/experimentation_res2.png">
-                <p> Les courbes oranges obtenues conservent bien les anomalies magnétiques.  </p>
-                <p> Préparation des expériences en plein air : fixation du magnétomètre, de son digitaliseur et de la batterie sur la luge avec du scotch velcro.  </p>
-                <p> Série de tests sur le stade de l’ENSTA Bretagne avec la luge et le magnétomètre   </p>
-                    <p> Un aller linéaire à 1 m de la plaque en fer  </p>
-                    <p> Un retour linéaire à 2 m de la plaque en fer.  </p>
-                    <p> Un aller linéaire reproduisant la première trajectoire, à vide sans plaque en fer  </p>
-                <p> Des vidéos ont été prises pour identifier la position du magnétomètre lors de ses missions.  </p>
-                <p> Analyse des résultats :  </p>
-                <img src="../picture/experimentation_res3.png">
-                <p> On détecte bien l’anomalie magnétique de la ferraille (cercle vert). Par contre, on détecte une anomalie importante dont l’origine est pour l’instant inconnue (câbles enterrés, ou aimant ?).  </p>
+            <br />
+           <div id = "date"> <li> Fait le 06/01/2021 </li> </div> 
+                <p> Etude de la perturbation retrouvée systématiquement sur les courbes de mesures. On observe effectivement un bruit parasite périodique de 50 Hz correspondant sûrement à la présence de courants alternatifs. </p>
+                <p> Mise en place d’un filtre à moyenne glissante pour réduire ce bruit : </p>  
+                <img class = "displayed_img" src="../picture/experimentation_res2.png"> <br>
+                <p> Les courbes oranges obtenues conservent bien les anomalies magnétiques.  </p> 
+                 Préparation des expériences en plein air : fixation du magnétomètre, de son digitaliseur et de la batterie sur la luge avec du scotch velcro.  </p> 
+                <p> Série de tests sur le stade de l’ENSTA Bretagne avec la luge et le magnétomètre  <br>  
+                     Un aller linéaire à 1 m de la plaque en fer <br>  
+                     Un retour linéaire à 2 m de la plaque en fer. <br>  
+                     Un aller linéaire reproduisant la première trajectoire, à vide sans plaque en fer <br>  
+                <p> Des vidéos ont été prises pour identifier la position du magnétomètre lors de ses missions.  </p> 
+                <p> Analyse des résultats :  </p> 
+                <img class = "displayed_img" src="../picture/experimentation_res3.png"> <br>
+                <p> On détecte bien l’anomalie magnétique de la ferraille (cercle vert). Par contre, on détecte une anomalie importante dont l’origine est pour l’instant inconnue (câbles enterrés, ou aimant ?).  </p> 
         </div>
   
 
