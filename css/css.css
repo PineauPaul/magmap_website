@@ -210,6 +210,7 @@ footer h1
 #page_title{    
 
     text-align: center;
+    color: DarkOrange;
 
 }
 
@@ -247,5 +248,38 @@ footer h1
   background-color: rgb(40, 40, 40);
   font-size: 20px;
   
-}s
+}
+
+#date
+{   
+
+    font-weight: bold;
+    color: Teal;
+    font-size: 1.3em;
+    margin: 1;
+    list-style: square inside;
+
+}
+
+
+.displayed_img {
+    width: 50%;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto  
+
+  }
+
+  .displayed_img2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto  
+
+  }
+#titreu
+{ 
+  font-size: 1.5em;
+  color: DarkOrange;
+}
 
