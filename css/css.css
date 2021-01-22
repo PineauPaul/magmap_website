@@ -149,6 +149,12 @@ nav a:visited
 
 /* Corps */
 
+#page_title
+{
+  color: DarkOrange;
+  text-align: center;
+}
+
 #intro h3
 {
 
