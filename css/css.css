@@ -196,7 +196,10 @@ article p
     font-size: 0.8em;
 }
 
-
+#name a
+{
+  text-decoration : none;
+}
 
 /* Footer */
 
