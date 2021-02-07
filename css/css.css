@@ -149,6 +149,11 @@ nav a:visited
 
 /* Corps */
 
+#yt
+{
+  text-align: center;
+}
+
 #page_title
 {
   color: DarkOrange;
