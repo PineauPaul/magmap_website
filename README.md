@@ -1,2 +1,2 @@
 # magmap_website
-Websote for the MagMap Project
+Website for the MagMap Project
